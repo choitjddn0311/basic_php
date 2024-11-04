@@ -23,7 +23,7 @@
             }
         }
 
-        $sql = "SELECT userid, name, passwd FROM manage_user";
+        $sql = "SELECT idx, userid, name, passwd FROM manage_user";
         $result = mysqli_query($conn,$sql);
     ?>
     <main>
@@ -38,6 +38,7 @@
                 if(mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
+                        echo "<td>". $row['idx'] . "</td>";
                         echo "<td>". $row['userid'] . "</td>";
                         echo "<td>". $row['name'] . "</td>";
                         echo "<td>". $row['passwd'] . "</td>";
