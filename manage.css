@@ -14,5 +14,16 @@ table {
     width: 1300px;
     height: 700px;
     border: 1px solid #aaa;
-    overflow-y: auto;
+    overflow: hidden;
+}
+table th {
+    height: 40px;
+    border: 1px solid #aaa;
+}
+table td {
+    height: 30px;
+    border: 1px solid #00aeff;
+    background: #00aeff;
+    color: #fff;
+    text-align: center;
 }
