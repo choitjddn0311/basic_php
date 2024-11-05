@@ -15,6 +15,10 @@ table {
     height: 700px;
     border: 1px solid #aaa;
     overflow: hidden;
+    border-collapse: collapse;
+}
+table tr {
+    border: 1px solid #aaa;
 }
 table th {
     height: 40px;
@@ -22,8 +26,6 @@ table th {
 }
 table td {
     height: 30px;
-    border: 1px solid #00aeff;
-    background: #00aeff;
-    color: #fff;
+    border: 1px solid #eee;
     text-align: center;
 }

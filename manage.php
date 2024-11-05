@@ -34,22 +34,14 @@
                 <th>User name</th>
                 <th>User password</th>
             </tr>
-            <?php
-                if(mysqli_num_rows($result) > 0) {
-                    while($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        echo "<td>". $row['idx'] . "</td>";
-                        echo "<td>". $row['userid'] . "</td>";
-                        echo "<td>". $row['name'] . "</td>";
-                        echo "<td>". $row['passwd'] . "</td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan = '4'>가입한 사용자 없노</td></tr>";
-                }
-
-                mysqli_close($conn);
-            ?>
+            <?php while($row = mysqli_fetch_assoc($result)) : ?>
+            <tr>
+                <td><?=$row['idx']?></td>
+                <td><?=$row['userid']?></td>
+                <td><?=$row['name']?></td>
+                <td><?=$row['passwd']?></td>
+            </tr>
+            <?php endwhile; ?>
         </table>
     </main>
 </body>
