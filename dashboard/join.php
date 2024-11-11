@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>join</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="join.css">
 </head>
 <body>
     <main>
@@ -24,7 +24,9 @@
             $user_id = $_POST['id'];
             $user_pw = $_POST['password'];
 
-            $insert = "INSERT INTO joinData(id,password) VALUES('$user_id','$user_pw')";
+            $hashed_pw = password_hash($user_pw,PASSWORD_DEFAULT);
+
+            $insert = "INSERT INTO joinData(id,password) VALUES('$user_id','$hashed_pw')";
 
             if (mysqli_query($conn, $insert)) {
                 echo "

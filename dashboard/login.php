@@ -24,14 +24,20 @@
             $user_id = $_POST['id'];
             $user_pw = $_POST['password'];
 
-            $insert = "SELECT * FROM joinData where id = '$user_id' AND password='$user_pw'";
+            $insert = "SELECT * FROM joinData where id = '$user_id'";
             $result = mysqli_query($conn,$insert);
 
             if(mysqli_num_rows($result) > 0) {
-                echo "<script>alert('login successful');</script>";
-                echo "<script>location.href = 'index.php';</script>";
-            } else {
-                echo "<script>alert('uncorrect ID or password')</script>";
+                $row = mysqli_fetch_assoc($result);
+
+                if(password_verify($user_pw, $row['password'])) {
+                    echo "<script>alert('login succesful');</script>";
+                    echo "<script>location.href = 'index.php';</script>";
+                } else {
+                    echo "<script>alert('Uncorrect ID or password')</script>";
+                }
+                } else {
+                    echo "<script>alert('Uncorrect ID or password')</script>";
             }
         }
 
