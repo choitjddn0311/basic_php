@@ -1,0 +1,9 @@
+dashboard db
+
+table
+
+create table joinData(
+idx int auto_increment primary key,
+id varchar(255) not null,
+password varchar(255) not null
+);
