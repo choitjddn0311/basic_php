@@ -5,53 +5,52 @@
     box-sizing: border-box;
     font-family: "Host Grotesk" , sans-serif;
 }
-body {
-    background: #00c3ff;
-}
 main {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #00aeff;
 }
 form {
     width: 300px;
     height: 250px;
     background: #fff;
     border-radius: 15px;
-    padding: 5px 20px;
+    padding: 10px 20px;
 }
 form > h1 {
     text-align: center;
     font-size: 35px;
 }
-.infoContainer {
+form > .inputContainer {
     width: 100%;
     height: 150px;
-    padding: 10px 0px;
+    padding: 10px 0;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: space-around;
 }
-.infoContainer > input {
-    width: 100%;
-    height: 35px;
-    padding-left: 5px;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #bbb;
-}
-form > input[type=submit] {
+.inputContainer > input {
     width: 100%;
     height: 30px;
-    background: #00c3ff;
-    color: #fff;
+    padding-left: 5px;
+    outline: none;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    border: none;
 }
-form > input[type=submit]:hover,
-form > input[type=submit]:active {
-    background: #00a2ff;
+form > input[type=submit]{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background: #00aeff;
+    color: #fff;
+    border: none;
+    transition: all .3s;
+}
+form > input[type=submit]:hover {
+    background: #0099ff;
     cursor: pointer;
+    transition: all .3s;
 }
