@@ -13,7 +13,7 @@
             <div class="inputContainer">
                 <input type="text" name="id" placeholder="enter your id" class="id">
                 <input type="password" name="pw" placeholder="enter your password" class="pw">
-                <input type="password" name="pwCheck" placeholder="enter your password,again" class="pwCheck">
+                <input type="password" name="pwCheck" placeholder="enter your password, again" class="pwCheck">
             </div>
             <input type="submit" value="join" class="joinBtn">
         </form>
@@ -50,25 +50,24 @@
         const pwCheck = document.querySelector('.pwCheck');
         const joinBtn = document.querySelector('.joinBtn');
 
-        joinBtn.addEventListener('click', (e) => {
-            if(pw.value != pwCheck.value){
-                e.preventDefault();
-                alert('the password is not correct');
-            }
-        });
-
-        joinBtn.addEventListener('click' , (e) => {
-            if(id.value == ''){
+        joinBtn.addEventListener('click',(e) => {
+            if(id.value.trim() === ''){
                 alert('please input your id');
                 e.preventDefault();
-            } else if(pw.value == '' && pwCheck.value == ''){
+                return;
+            }
+            if(pw.value.trim() === '' || pwCheck.value.trim() === ''){
                 alert('please input your password');
                 e.preventDefault();
-            } else {
-                e.preventDefault();
-                return true;
+                return;
             }
-        });
+
+            if(pw.value !== pwCheck.value){
+                alert('the password is not correct');
+                e.preventDefault();
+                return;
+            }
+        })
     </script>
 </body>
 </html>
