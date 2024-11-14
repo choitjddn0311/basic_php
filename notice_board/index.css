@@ -47,6 +47,10 @@ main {
     box-shadow: 0 0 30px #eee;
     padding: 30px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .create {
     width: 100px;
@@ -62,4 +66,35 @@ main {
     background: #111;
     border: none;
     color: #fff;
+}
+.notice_title {
+    width: 70%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+}
+.notice_contents {
+    display: block;
+    width: 70%;
+    height: 500px;
+    resize: none;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 10px;
+}
+.notice_submit {
+    width: 70%;
+    height: 50px;
+    background: #fff;
+    color: #aaa;
+    border: 1px solid #aaa;
+}
+.notice_submit:hover {
+    background: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }

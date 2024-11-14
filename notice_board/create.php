@@ -26,7 +26,9 @@
     </header>
     <main>
         <form class="container mContainer" action="insert.php" method="post">
-
+            <input type="text" placeholder="글의 제목을 적어주세요." name="title" class="notice_title">
+            <textarea name="contents" class="notice_contents" placeholder="글의 내용을 입력해주세요"></textarea>
+            <input type="submit" value="글 올리기" class="notice_submit">
         </form>
     </main>
 </body>
