@@ -23,16 +23,28 @@
         <div class="container mContainer">
             <a href="create.php" class="create">글 등록</a>
             <ul class="writing">
+                <?php
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo '<li>';
+                            echo '<div class = "about">';
+                            echo '<p>'. htmlspecialchars($row['idx']) . '</p>';
+                            echo '<h3>'. htmlspecialchars($row['title']) . '</h3>';
+                            echo '</div>';
+                            echo '<button><a href="view.php?idx=' .$row['idx'] . '">보기</a></button>';
+                            echo '</li>';
+                        }
+                        } else {
+                            echo '<li>등록된 게시글이 없습니다</li>';
+                    }
+                ?>
                 <!-- <li>
                     <div class="about">
-                        <h3>글제목1</h3>
-                        <button><a href="">보기</a></button>
+                        <p>1</p>
+                        <h3>글제목2</h3>
                     </div>
-                    <div class="editBtnContainer">
-                        
-                    </div>
-                </li> -->
-                <li><p>1</p><h3>글제목2</h3><button><a href="">보기</a></button></li>
+                <button><a href="">보기</a></button>
+            </li> -->
             </ul>
         </div>
     </main>
