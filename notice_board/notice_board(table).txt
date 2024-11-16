@@ -4,4 +4,4 @@ title varchar(255) not null,
 contents varchar(255) not null
 );
 
-truncate from <table_name>; <== auto_increment 값까지 1로 초기화함 (데이터 모두 삭제)
+TRUNCATE TABLE <table_name>; <== auto_increment 값까지 1로 초기화함 (데이터 모두 삭제)

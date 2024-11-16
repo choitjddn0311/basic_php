@@ -32,8 +32,8 @@
     </header>
     <main>
         <form class="container mContainer" action="insert.php" method="post">
-            <input type="text" name="title" class="notice_title" value="<?php echo htmlspecialchars($title)?>" readonly>
-            <textarea name="contents" class="notice_contents" readonly><?php echo htmlspecialchars($contents) ?></textarea>
+            <input type="text" name="title" class="notice_title" value="<?php echo htmlspecialchars($title); ?>" readonly>
+            <textarea name="contents" class="notice_contents" readonly><?php echo htmlspecialchars($contents); ?></textarea>
             <button class="notice_submit"><a href="index.php">돌아가기</a></button>
         </form>
     </main>

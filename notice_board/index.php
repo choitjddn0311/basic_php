@@ -35,7 +35,7 @@
                             echo '</li>';
                         }
                         } else {
-                            echo '<li>등록된 게시글이 없습니다</li>';
+                            echo '<div class="no_contents"><h2>등록된 게시글이 없습니다</h2></div>';
                     }
                 ?>
             </ul>
