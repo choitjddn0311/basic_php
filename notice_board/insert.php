@@ -3,7 +3,7 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $title = isset($_POST['title']) ? trim($_POST['title']) : '';
-        $contents = isset($_POST['contents']) ? trim($_POST['title']) : '';
+        $contents = isset($_POST['contents']) ? trim($_POST['contents']) : '';
 
         if(empty($title) || empty($contents)){
             echo "<script>alert('내용이 비어있습니다.'); history.back() </script>";
