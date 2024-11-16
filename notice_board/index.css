@@ -101,6 +101,10 @@ main {
 .writing {
     width: 80%;
     height: 630px;
+    overflow-y: scroll;
+}
+.writing::-webkit-scrollbar {
+    display: none;
 }
 .writing > li {
     display: flex;

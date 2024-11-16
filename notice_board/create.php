@@ -31,5 +31,13 @@
             <input type="submit" value="글 올리기" class="notice_submit">
         </form>
     </main>
+    <script>
+        const title = document.querySelector('.notice_title');
+        const contents = document.querySelector('.notice_contents');
+
+        if(title == '' || contents == ''){
+            alert("내용이 비어있습니다.");
+        }
+    </script>
 </body>
 </html>

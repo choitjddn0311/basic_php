@@ -38,13 +38,6 @@
                             echo '<li>등록된 게시글이 없습니다</li>';
                     }
                 ?>
-                <!-- <li>
-                    <div class="about">
-                        <p>1</p>
-                        <h3>글제목2</h3>
-                    </div>
-                <button><a href="">보기</a></button>
-            </li> -->
             </ul>
         </div>
     </main>
